@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "Today";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    DateTime today = DateTime.Today;
+    DayOfWeek dayOfWeek = today.DayOfWeek;
+    int day = today.Day;
+}
+
+<h2>Сегодня <small>@today.ToString("dd MMMM yyyy г., dddd ")</small></h2>
