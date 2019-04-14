@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    DateTime today = DateTime.Today;
+    int daysInMonth = DateTime.DaysInMonth(today.Year, today.Month);
+}
+
+<table class="table table-bordered">
+    <tr>
+        @for (int day = 1; day <= daysInMonth; day++)
+        {
+            DateTime date = new DateTime(today.Year, today.Month, day);
+            DayOfWeek dayOfWeek = date.DayOfWeek;
+            <td>
+                @day
+               <br />
+                @dayOfWeek
+            </td>
+        }
+    </tr>
+</table>
